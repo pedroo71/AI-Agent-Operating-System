@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<title>Mission Control</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#05080d}
+a{color:#7fe3f2}a:hover{color:#b8f2fa}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion: reduce){*{animation:none !important}}
+</style>
+</helmet>
+<div style="width:100%;min-height:900px;box-sizing:border-box;background:#05080d;color:#d7e3ee;font-family:'Space Grotesk',system-ui,sans-serif;display:flex;flex-direction:column;background-image:linear-gradient(rgba(76,214,232,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(76,214,232,.06) 1px,transparent 1px);background-size:40px 40px">
+
+  <header style="display:flex;flex-wrap:wrap;align-items:center;gap:24px;padding:16px 28px;border-bottom:1px solid rgba(76,214,232,.25)">
+    <div style="font-weight:700;letter-spacing:.18em;font-size:18px;color:{{accent}}">AGENT//OS</div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#8fa3b5">SESSÃO · Sistema operativo para visualizar agentes</div>
+    <div style="flex:1"></div>
+    <div style="display:flex;gap:28px;font-family:'JetBrains Mono',monospace;font-size:12px">
+      <div><div style="color:#8fa3b5">AGENTES</div><div style="font-size:20px;color:#ffffff">05</div></div>
+      <div><div style="color:#8fa3b5">ATIVOS</div><div style="font-size:20px;color:#5bd69a">02</div></div>
+      <div><div style="color:#8fa3b5">FERRAMENTAS</div><div style="font-size:20px;color:#ffffff">418</div></div>
+      <div><div style="color:#8fa3b5">LATÊNCIA</div><div style="font-size:20px;color:#ffffff">0,2 s</div></div>
+    </div>
+    <div style="display:flex;align-items:center;gap:8px;padding:6px 12px;border:1px solid #5bd69a;border-radius:999px;font-family:'JetBrains Mono',monospace;font-size:12px;color:#5bd69a"><span style="width:8px;height:8px;border-radius:50%;background:#5bd69a;animation:pulse 1.4s infinite"></span>AO VIVO</div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:20px;color:#ffffff">13:42:07</div>
+  </header>
+
+  <main style="flex:1;display:grid;grid-template-columns:300px minmax(0,1fr) 360px;gap:20px;padding:20px 28px">
+
+    <section aria-label="Agentes" style="display:flex;flex-direction:column;gap:12px">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.2em;color:#8fa3b5">// TELEMETRIA</div>
+      <div style="border:1px solid rgba(245,184,75,.5);background:rgba(245,184,75,.06);padding:12px 14px;clip-path:polygon(0 0,calc(100% - 14px) 0,100% 14px,100% 100%,0 100%)">
+        <div style="display:flex;justify-content:space-between;align-items:center"><span style="font-weight:700;color:#f5b84b">TECH-LEAD</span><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#5bd69a">● ATIVO</span></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#c3d1dd;margin-top:6px">Write → project/Main.dc.html</div>
+        <div style="height:3px;background:rgba(255,255,255,.08);margin-top:10px"><div style="width:72%;height:3px;background:#f5b84b"></div></div>
+      </div>
+      <div style="border:1px solid rgba(91,214,154,.5);background:rgba(91,214,154,.06);padding:12px 14px;clip-path:polygon(0 0,calc(100% - 14px) 0,100% 14px,100% 100%,0 100%)">
+        <div style="display:flex;justify-content:space-between;align-items:center"><span style="font-weight:700;color:#5bd69a">QA-ENGINEER</span><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#5bd69a">● ATIVO</span></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#c3d1dd;margin-top:6px">Bash → npx playwright test</div>
+        <div style="height:3px;background:rgba(255,255,255,.08);margin-top:10px"><div style="width:54%;height:3px;background:#5bd69a"></div></div>
+      </div>
+      <div style="border:1px solid rgba(167,139,250,.3);padding:12px 14px;clip-path:polygon(0 0,calc(100% - 14px) 0,100% 14px,100% 100%,0 100%)">
+        <div style="display:flex;justify-content:space-between"><span style="font-weight:700;color:#a78bfa">BACKEND-DEV</span><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#8fa3b5">○ INATIVO</span></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#8fa3b5;margin-top:6px">Edit → next.config.ts</div>
+      </div>
+      <div style="border:1px solid rgba(76,214,232,.3);padding:12px 14px;clip-path:polygon(0 0,calc(100% - 14px) 0,100% 14px,100% 100%,0 100%)">
+        <div style="display:flex;justify-content:space-between"><span style="font-weight:700;color:#4cd6e8">FRONTEND-DEV</span><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#8fa3b5">○ INATIVO</span></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#8fa3b5;margin-top:6px">Edit → TimelineWindow.tsx</div>
+      </div>
+      <div style="border:1px solid rgba(244,143,177,.3);padding:12px 14px;clip-path:polygon(0 0,calc(100% - 14px) 0,100% 14px,100% 100%,0 100%)">
+        <div style="display:flex;justify-content:space-between"><span style="font-weight:700;color:#f48fb1">GROWTH</span><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#8fa3b5">◼ TERMINADO</span></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#8fa3b5;margin-top:6px">SEO_AUDIT · spec met</div>
+      </div>
+    </section>
+
+    <section aria-label="Órbita da equipa" style="position:relative;border:1px solid rgba(76,214,232,.2);display:flex;align-items:center;justify-content:center;min-height:560px;overflow:hidden">
+      <div style="position:absolute;top:12px;left:16px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.2em;color:#8fa3b5">// ÓRBITA · MENSAGENS EM TEMPO REAL</div>
+      <div style="position:relative;width:520px;height:520px">
+        <div style="position:absolute;inset:0;border:1px dashed rgba(76,214,232,.25);border-radius:50%"></div>
+        <div style="position:absolute;inset:90px;border:1px solid rgba(76,214,232,.15);border-radius:50%;animation:spin 40s linear infinite;border-top-color:{{accent}}"></div>
+        <div style="position:absolute;left:260px;top:260px;width:210px;height:1px;background:linear-gradient(90deg,#f5b84b,rgba(91,214,154,.8));transform-origin:0 0;transform:rotate(-20deg)"></div>
+        <div style="position:absolute;left:260px;top:260px;width:210px;height:1px;background:rgba(167,139,250,.35);transform-origin:0 0;transform:rotate(52deg)"></div>
+        <div style="position:absolute;left:260px;top:260px;width:210px;height:1px;background:rgba(76,214,232,.35);transform-origin:0 0;transform:rotate(124deg)"></div>
+        <div style="position:absolute;left:260px;top:260px;width:210px;height:1px;background:rgba(244,143,177,.25);transform-origin:0 0;transform:rotate(196deg)"></div>
+        <div style="position:absolute;left:210px;top:210px;width:100px;height:100px;border-radius:50%;border:2px solid #f5b84b;background:rgba(245,184,75,.12);display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 0 40px rgba(245,184,75,.35)">
+          <div style="font-weight:700;font-size:13px;color:#f5b84b">TECH-LEAD</div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#e8d3a8">núcleo</div>
+        </div>
+        <div style="position:absolute;left:418px;top:150px;width:84px;height:84px;border-radius:50%;border:2px solid #5bd69a;background:#07140f;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#5bd69a;box-shadow:0 0 28px rgba(91,214,154,.5)">QA</div>
+        <div style="position:absolute;left:350px;top:390px;width:76px;height:76px;border-radius:50%;border:1px solid #a78bfa;background:#0d0a18;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#a78bfa">BACK</div>
+        <div style="position:absolute;left:100px;top:390px;width:76px;height:76px;border-radius:50%;border:1px solid #4cd6e8;background:#06141a;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#4cd6e8">FRONT</div>
+        <div style="position:absolute;left:30px;top:150px;width:76px;height:76px;border-radius:50%;border:1px solid #f48fb1;background:#170a10;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#f48fb1;opacity:.6">SEO</div>
+        <div style="position:absolute;left:330px;top:196px;padding:4px 8px;background:#0b1a14;border:1px solid #5bd69a;font-family:'JetBrains Mono',monospace;font-size:11px;color:#bff0d6">→ qa: corre a suite uma vez</div>
+      </div>
+      <div style="position:absolute;bottom:14px;left:16px;right:16px;display:flex;gap:6px;align-items:flex-end;height:36px" aria-hidden="true">
+        <div style="flex:1;height:30%;background:#f5b84b"></div><div style="flex:1;height:60%;background:#5bd69a"></div><div style="flex:1;height:45%;background:#a78bfa"></div><div style="flex:1;height:90%;background:#5bd69a"></div><div style="flex:1;height:20%;background:#4cd6e8"></div><div style="flex:1;height:70%;background:#f5b84b"></div><div style="flex:1;height:40%;background:#5bd69a"></div><div style="flex:1;height:55%;background:#a78bfa"></div><div style="flex:1;height:85%;background:#5bd69a"></div><div style="flex:1;height:35%;background:#f5b84b"></div><div style="flex:1;height:65%;background:#4cd6e8"></div><div style="flex:1;height:100%;background:#5bd69a"></div>
+      </div>
+    </section>
+
+    <section aria-label="Feed" style="display:flex;flex-direction:column;gap:2px;font-family:'JetBrains Mono',monospace;font-size:12px">
+      <div style="font-size:11px;letter-spacing:.2em;color:#8fa3b5;margin-bottom:10px">// FEED</div>
+      <div style="display:grid;grid-template-columns:64px 1fr;gap:8px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.06)"><span style="color:#8fa3b5">13:42:07</span><span><span style="color:#f5b84b">tech-lead</span> Write project/Main.dc.html</span></div>
+      <div style="display:grid;grid-template-columns:64px 1fr;gap:8px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.06)"><span style="color:#8fa3b5">13:42:01</span><span><span style="color:#5bd69a">qa</span> ✓ 47/47 passed</span></div>
+      <div style="display:grid;grid-template-columns:64px 1fr;gap:8px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.06)"><span style="color:#8fa3b5">13:41:40</span><span><span style="color:#a78bfa">backend</span> → qa: BUG-001 corrigido</span></div>
+      <div style="display:grid;grid-template-columns:64px 1fr;gap:8px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.06)"><span style="color:#8fa3b5">13:41:12</span><span><span style="color:#4cd6e8">frontend</span> Edit globals.css</span></div>
+      <div style="display:grid;grid-template-columns:64px 1fr;gap:8px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.06)"><span style="color:#8fa3b5">13:40:55</span><span><span style="color:#5bd69a">qa</span> <span style="color:#ff8a8a">✗ LIVE-02 timeout</span></span></div>
+      <div style="display:grid;grid-template-columns:64px 1fr;gap:8px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.06)"><span style="color:#8fa3b5">13:40:31</span><span><span style="color:#f5b84b">tech-lead</span> → qa: limite de tempo</span></div>
+      <div style="display:grid;grid-template-columns:64px 1fr;gap:8px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.06)"><span style="color:#8fa3b5">13:39:58</span><span><span style="color:#a78bfa">backend</span> Bash npm run build</span></div>
+      <div style="display:grid;grid-template-columns:64px 1fr;gap:8px;padding:8px 0"><span style="color:#8fa3b5">13:39:20</span><span><span style="color:#f48fb1">growth</span> Verdict: spec met</span></div>
+    </section>
+  </main>
+
+  <footer style="display:flex;flex-wrap:wrap;gap:12px;padding:12px 28px;border-top:1px solid rgba(76,214,232,.25);font-family:'JetBrains Mono',monospace;font-size:12px">
+    <button style="background:transparent;border:1px solid {{accent}};color:{{accent}};padding:10px 16px;font:inherit;min-height:44px">AGENTES</button>
+    <button style="background:transparent;border:1px solid rgba(255,255,255,.2);color:#c3d1dd;padding:10px 16px;font:inherit;min-height:44px">TAREFAS</button>
+    <button style="background:transparent;border:1px solid rgba(255,255,255,.2);color:#c3d1dd;padding:10px 16px;font:inherit;min-height:44px">PROJETOS 11/11</button>
+    <button style="background:transparent;border:1px solid rgba(255,255,255,.2);color:#c3d1dd;padding:10px 16px;font:inherit;min-height:44px">MEMÓRIA</button>
+    <div style="flex:1"></div>
+    <div style="align-self:center;color:#8fa3b5">BUGS ABERTOS 0 · BLOQUEADORES 0</div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#4cd6e8","options":["#4cd6e8","#5bd69a","#f5b84b","#a78bfa"]},"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+renderVals() {
+return { accent: this.props.accent ?? '#4cd6e8' };
+}
+}
+</script>
+</body>
+</html>

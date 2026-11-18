@@ -1,0 +1,22 @@
+{
+  "name": "session-11111111",
+  "createdAt": 1768039200000,
+  "leadAgentId": "team-lead@session-11111111",
+  "leadSessionId": "11111111-aaaa-4bbb-8ccc-222222222222",
+  "members": [
+    {
+      "agentId": "team-lead@session-11111111",
+      "name": "team-lead",
+      "agentType": "team-lead",
+      "joinedAt": 1768039200000,
+      "cwd": "C:\\fixtures\\demo"
+    },
+    {
+      "agentId": "backend-dev@session-11111111",
+      "name": "backend-dev",
+      "agentType": "backend-dev",
+      "joinedAt": 1768039260000,
+      "cwd": "C:\\fixtures\\demo"
+    }
+  ]
+}

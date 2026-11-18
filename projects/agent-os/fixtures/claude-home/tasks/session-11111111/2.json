@@ -1,0 +1,11 @@
+{
+  "id": "2",
+  "subject": "Implementar a API",
+  "description": "",
+  "status": "in_progress",
+  "blocks": [],
+  "blockedBy": [
+    "1"
+  ],
+  "owner": "backend-dev"
+}

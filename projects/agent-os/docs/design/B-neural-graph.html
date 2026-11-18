@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<title>Neural Graph</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0a0a0f}
+a{color:#c6f36b}a:hover{color:#e2fbb0}
+@keyframes flow{to{background-position:24px 0}}
+@keyframes glow{0%,100%{box-shadow:0 0 0 0 rgba(198,243,107,.45)}50%{box-shadow:0 0 0 10px rgba(198,243,107,0)}}
+@media (prefers-reduced-motion: reduce){*{animation:none !important}}
+</style>
+</helmet>
+<div style="width:100%;min-height:900px;box-sizing:border-box;background:#0a0a0f;color:#e6e6ef;font-family:Inter,system-ui,sans-serif;display:flex;flex-wrap:wrap">
+
+  <nav aria-label="Navegação" style="width:64px;display:flex;flex-direction:column;align-items:center;gap:8px;padding:16px 0;border-right:1px solid #1d1d28">
+    <div style="width:32px;height:32px;border-radius:8px;background:{{accent}};margin-bottom:16px"></div>
+    <button aria-label="Grafo" style="width:44px;height:44px;border-radius:10px;border:0;background:#1d1d28;color:{{accent}};display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="5" cy="12" r="2.5"/><circle cx="19" cy="5" r="2.5"/><circle cx="19" cy="19" r="2.5"/><path d="M7.3 11 16.8 6M7.3 13l9.5 5"/></svg></button>
+    <button aria-label="Tarefas" style="width:44px;height:44px;border-radius:10px;border:0;background:transparent;color:#9a9ab0;display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11M4 6l1 1 2-2M4 12l1 1 2-2M4 18l1 1 2-2"/></svg></button>
+    <button aria-label="Projetos" style="width:44px;height:44px;border-radius:10px;border:0;background:transparent;color:#9a9ab0;display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 7h7l2 2h9v10H3z"/></svg></button>
+    <button aria-label="Memória" style="width:44px;height:44px;border-radius:10px;border:0;background:transparent;color:#9a9ab0;display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3a6 6 0 0 0-6 6c0 4 6 12 6 12s6-8 6-12a6 6 0 0 0-6-6z"/><circle cx="12" cy="9" r="2"/></svg></button>
+  </nav>
+
+  <div style="flex:999 1 560px;min-width:0;display:flex;flex-direction:column">
+    <header style="display:flex;flex-wrap:wrap;align-items:center;gap:16px;padding:16px 24px;border-bottom:1px solid #1d1d28">
+      <div style="font-weight:700;font-size:16px">Agent OS</div>
+      <div style="font-size:13px;color:#9a9ab0">/ Sistema operativo para visualizar agentes</div>
+      <div style="flex:1"></div>
+      <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:{{accent}}"><span style="width:8px;height:8px;border-radius:50%;background:{{accent}};animation:glow 1.6s infinite"></span>Ao vivo · 0,2 s</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#c9c9d6">13:42:07</div>
+    </header>
+
+    <section aria-label="Grafo da equipa" style="position:relative;flex:1;min-height:560px;overflow:hidden;background-image:radial-gradient(#22222e 1px,transparent 1px);background-size:22px 22px">
+      <div style="position:absolute;left:330px;top:150px;width:260px;height:2px;transform-origin:0 0;transform:rotate(-14deg);background:repeating-linear-gradient(90deg,{{accent}} 0 8px,transparent 8px 16px);animation:flow .6s linear infinite"></div>
+      <div style="position:absolute;left:330px;top:170px;width:250px;height:1px;transform-origin:0 0;transform:rotate(32deg);background:#3a3a4c"></div>
+      <div style="position:absolute;left:300px;top:190px;width:200px;height:1px;transform-origin:0 0;transform:rotate(118deg);background:#3a3a4c"></div>
+      <div style="position:absolute;left:600px;top:96px;width:210px;height:1px;transform-origin:0 0;transform:rotate(86deg);background:#3a3a4c"></div>
+      <div style="position:absolute;left:280px;top:150px;width:200px;height:1px;transform-origin:0 0;transform:rotate(172deg);background:#2a2a38"></div>
+
+      <div style="position:absolute;left:200px;top:120px;width:200px;padding:14px;border-radius:14px;background:#15151d;border:1px solid #f5b84b">
+        <div style="display:flex;align-items:center;gap:8px"><span style="width:10px;height:10px;border-radius:50%;background:#f5b84b"></span><span style="font-weight:600">tech-lead</span><span style="margin-left:auto;font-size:11px;color:#f5b84b">ativo</span></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#b9b9c8;margin-top:8px">Write → Graph.dc.html</div>
+      </div>
+      <div style="position:absolute;left:560px;top:50px;width:210px;padding:14px;border-radius:14px;background:#15151d;border:1px solid {{accent}};animation:glow 1.6s infinite">
+        <div style="display:flex;align-items:center;gap:8px"><span style="width:10px;height:10px;border-radius:50%;background:#5bd69a"></span><span style="font-weight:600">qa-engineer</span><span style="margin-left:auto;font-size:11px;color:#5bd69a">ativo</span></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#b9b9c8;margin-top:8px">Bash → playwright test</div>
+      </div>
+      <div style="position:absolute;left:470px;top:255px;padding:6px 10px;border-radius:8px;background:#1f2a12;border:1px solid {{accent}};font-size:12px;color:#e2fbb0">“corre a suite uma vez”</div>
+      <div style="position:absolute;left:520px;top:320px;width:200px;padding:14px;border-radius:14px;background:#121218;border:1px solid #2e2e3e">
+        <div style="display:flex;align-items:center;gap:8px"><span style="width:10px;height:10px;border-radius:50%;background:#a78bfa"></span><span style="font-weight:600">backend-dev</span><span style="margin-left:auto;font-size:11px;color:#9a9ab0">inativo</span></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#9a9ab0;margin-top:8px">Edit → next.config.ts</div>
+      </div>
+      <div style="position:absolute;left:120px;top:340px;width:200px;padding:14px;border-radius:14px;background:#121218;border:1px solid #2e2e3e">
+        <div style="display:flex;align-items:center;gap:8px"><span style="width:10px;height:10px;border-radius:50%;background:#4cd6e8"></span><span style="font-weight:600">frontend-dev</span><span style="margin-left:auto;font-size:11px;color:#9a9ab0">inativo</span></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#9a9ab0;margin-top:8px">Edit → globals.css</div>
+      </div>
+      <div style="position:absolute;left:20px;top:110px;width:150px;padding:12px;border-radius:14px;background:#101014;border:1px dashed #3a3a4c;opacity:.75">
+        <div style="display:flex;align-items:center;gap:8px"><span style="width:10px;height:10px;border-radius:50%;background:#f48fb1"></span><span style="font-weight:600;font-size:13px">growth</span></div>
+        <div style="font-size:11px;color:#9a9ab0;margin-top:6px">terminado</div>
+      </div>
+      <div style="position:absolute;left:24px;bottom:16px;font-size:12px;color:#9a9ab0">Arrasta para mover · roda para zoom · clica num nó para inspecionar</div>
+    </section>
+
+    <section aria-label="Linha do tempo" style="border-top:1px solid #1d1d28;padding:14px 24px">
+      <div style="display:flex;justify-content:space-between;font-size:12px;color:#9a9ab0;margin-bottom:10px"><span>Linha do tempo da sessão</span><span>12:28 → agora</span></div>
+      <div style="display:grid;grid-template-columns:110px 1fr;row-gap:8px;align-items:center;font-size:12px">
+        <span style="color:#f5b84b">tech-lead</span><div style="height:10px;border-radius:5px;background:linear-gradient(90deg,#f5b84b 0 8%,transparent 8% 30%,#f5b84b 30% 34%,transparent 34% 88%,#f5b84b 88% 100%);background-color:#17171f"></div>
+        <span style="color:#a78bfa">backend</span><div style="height:10px;border-radius:5px;background:linear-gradient(90deg,transparent 0 12%,#a78bfa 12% 48%,transparent 48% 70%,#a78bfa 70% 76%,transparent 76%);background-color:#17171f"></div>
+        <span style="color:#4cd6e8">frontend</span><div style="height:10px;border-radius:5px;background:linear-gradient(90deg,transparent 0 12%,#4cd6e8 12% 44%,transparent 44% 72%,#4cd6e8 72% 78%,transparent 78%);background-color:#17171f"></div>
+        <span style="color:#5bd69a">qa</span><div style="height:10px;border-radius:5px;background:linear-gradient(90deg,transparent 0 12%,#5bd69a 12% 18%,transparent 18% 44%,#5bd69a 44% 100%);background-color:#17171f"></div>
+        <span style="color:#f48fb1">growth</span><div style="height:10px;border-radius:5px;background:linear-gradient(90deg,transparent 0 12%,#f48fb1 12% 20%,transparent 20% 40%,#f48fb1 40% 46%,transparent 46%);background-color:#17171f"></div>
+      </div>
+    </section>
+  </div>
+
+  <aside aria-label="Inspetor" style="flex:1 1 340px;max-width:380px;border-left:1px solid #1d1d28;padding:20px;display:flex;flex-direction:column;gap:14px;box-sizing:border-box">
+    <div style="font-size:12px;color:#9a9ab0">Inspetor</div>
+    <div style="display:flex;align-items:center;gap:10px"><span style="width:14px;height:14px;border-radius:50%;background:#5bd69a"></span><span style="font-weight:700;font-size:20px">qa-engineer</span></div>
+    <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px">
+      <div style="background:#15151d;border-radius:10px;padding:10px"><div style="font-size:11px;color:#9a9ab0">Ferramentas</div><div style="font-size:18px;font-weight:600">126</div></div>
+      <div style="background:#15151d;border-radius:10px;padding:10px"><div style="font-size:11px;color:#9a9ab0">Erros</div><div style="font-size:18px;font-weight:600;color:#ff9b9b">4</div></div>
+      <div style="background:#15151d;border-radius:10px;padding:10px"><div style="font-size:11px;color:#9a9ab0">Modelo</div><div style="font-size:14px;font-weight:600;margin-top:3px">Sonnet</div></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:0;font-family:'JetBrains Mono',monospace;font-size:12px">
+      <div style="padding:10px 0 10px 16px;border-left:2px solid #5bd69a"><div style="color:#9a9ab0">13:42:01</div>✓ 47/47 passed</div>
+      <div style="padding:10px 0 10px 16px;border-left:2px solid #2e2e3e"><div style="color:#9a9ab0">13:41:44</div>Bash → playwright test --project=mobile</div>
+      <div style="padding:10px 0 10px 16px;border-left:2px solid #ff9b9b"><div style="color:#9a9ab0">13:40:55</div><span style="color:#ff9b9b">✗ LIVE-02 timeout 2000 ms</span></div>
+      <div style="padding:10px 0 10px 16px;border-left:2px solid #2e2e3e"><div style="color:#9a9ab0">13:40:31</div>← tech-lead: limite de tempo</div>
+      <div style="padding:10px 0 10px 16px;border-left:2px solid #2e2e3e"><div style="color:#9a9ab0">13:39:12</div>Write → docs/qa/bugs/BUG-002.md</div>
+    </div>
+  </aside>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#c6f36b","options":["#c6f36b","#4cd6e8","#a78bfa","#f5b84b"]},"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+renderVals() {
+return { accent: this.props.accent ?? '#c6f36b' };
+}
+}
+</script>
+</body>
+</html>

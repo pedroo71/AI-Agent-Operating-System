@@ -1,0 +1,11 @@
+{
+  "id": "3",
+  "subject": "Testar a API",
+  "description": "",
+  "status": "pending",
+  "blocks": [],
+  "blockedBy": [
+    "2"
+  ],
+  "owner": "qa-engineer"
+}
